@@ -1,17 +1,17 @@
 body, html {
     font-family: helvetica, arial, sans-serif;
     font-weight: bold;
-    /* background-color: rgb(46, 43, 43); */
+    background-color: rgb(46, 43, 43);
     color: aliceblue;
   }
-  .bg {
-    /* Full height */
-    height: 100%;
+
+  img {
     width: 100%;
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: 100%;
+    object-position: 50% 50%;
+  }
+  .bg {
+    max-width: 100%;
   }
   
   h1 {
