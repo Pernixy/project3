@@ -1,0 +1,20 @@
+body, html {
+    font-family: helvetica, arial, sans-serif;
+    font-weight: bold;
+    /* background-color: rgb(46, 43, 43); */
+    color: aliceblue;
+  }
+  .bg {
+    /* Full height */
+    height: 100%;
+    width: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  h1 {
+    font-style: italic;
+    color: #373fff;
+  }

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NASA API</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
+  </head>
+  <body>
+    <h1>
+      NASA API
+    </h1>
+    <input id="searchTerm" type="text" placeholder="Enter search term" />
+    <button id="search">
+      Search
+    </button>
+    <div class=picture id="content">
+      
+    </div>
+  </body>
+</html>
+
+<script>
+  let searchButton = document.querySelector("#search")
+let searchTerm = "";
+
+//Add an event listener to the button that runs the function sendApiRequest when it is clicked
+searchButton.addEventListener("click", ()=>{
+  console.log("button pressed")
+  // sendApiRequest()
+  searchTerm = document.getElementById("searchTerm").value;
+  search(searchTerm);
+})
+
+function search(q) {
+    $.ajax({
+        url:"https://images-api.nasa.gov/search?q="+q,
+        success: function(data) {
+            console.log(data);
+            document.body.style.backgroundImage = "url('"+data.collection.items[0].links[0].href+"')";
+            document.body.style.backgroundRepeat = "no-repeat";
+            document.body.style.backgroundSize = "cover";
+        }
+    })
+}
+</script>
