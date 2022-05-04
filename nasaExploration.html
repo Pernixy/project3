@@ -22,6 +22,9 @@
     <div class="bg" id="content">
       
     </div>
+    <p id="title">
+
+    </p>
       </div>
 </div>
   </body>
@@ -38,6 +41,7 @@ function search(q) {
         success: function(data) {
             console.log(data);
             document.getElementById("content").innerHTML = "<img src="+data.collection.items[index].links[0].href+" />";
+            document.getElementById("title").innerHTML = data.collection.items[index].data[0].title;
         }
     })
 }
