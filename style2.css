@@ -1,10 +1,10 @@
 body, html {
     background-image: url("stars3.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
     font-family: helvetica, arial, sans-serif;
     font-weight: bold;
     background-color: rgb(46, 43, 43);
+    background-repeat: no-repeat;
+    background-size: cover;
     color: aliceblue;
   }
 
@@ -12,7 +12,6 @@ body, html {
     width: 100%;
     height: 100%;
     object-position: 50% 50%;
-    image-resolution: 100%;
   }
   .container {
     text-align: center;
@@ -22,6 +21,16 @@ body, html {
     margin-right: -50%;
     transform: translate(-50%, -50%);
   }
+  
+  h1 {
+      /* margin-bottom: 35%; */
+    font-style: italic;
+    color: #373fff;
+  }
+
+  input {
+      text-align: center;
+  }
   .main {
     background-color: rgb(46, 44, 44);
     display: inline-block;
@@ -29,16 +38,20 @@ body, html {
     border-radius: 25px;
     margin-top: 30px;
     margin-bottom: 50px;
-    width: 750px;
+    width: 350px;
     height: 500px;
     text-align: center;
   }
-  input {
+
+a {
+    color: aliceblue;
+    display: inline-block;
     text-align: center;
-    font-size: large;
-    font-weight: bold;
-  }
-  h1 {
-    font-style: italic;
-    color: #373fff;
-  }
+    border-radius: 25px;
+    padding-top: 10px;
+    margin-top: 50%;
+    width: 100px;
+    height: 30px;
+    background-color: rgb(122, 117, 117);
+    text-decoration: none;
+}
